@@ -3,11 +3,33 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link id="favicon" rel="icon" href="/assets/favicon-light-DEqzRGHl.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serre Beauty Admin</title>
+  <script>
+    if (localStorage.theme === 'dark' || !('theme' in localStorage)) {
+      document.querySelector('html').classList.add('dark');
+      document.querySelector('html').style.colorScheme = 'dark';
+    } else {
+      document.querySelector('html').classList.remove('dark');
+      document.querySelector('html').style.colorScheme = 'light';
+    }        
+  </script>
+  <script type="module" crossorigin src="/assets/index-B5MqQTb7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bm89Kz1i.css">
 </head>
 
-<body>
-  <h1>Hello World!</h1>
+<body class="font-inter antialiased bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script>
+    if (localStorage.getItem('sidebar-expanded') == 'true') {
+      document.querySelector('body').classList.add('sidebar-expanded');
+    } else {
+      document.querySelector('body').classList.remove('sidebar-expanded');
+    }
+  </script>
+  <div id="root"></div>
 </body>
 
 </html>
